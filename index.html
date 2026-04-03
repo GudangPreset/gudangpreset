@@ -15,58 +15,131 @@
     <header class="p-6 bg-gray-800 border-b border-gray-700 sticky top-0 z-20">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <h1 class="text-2xl font-bold text-blue-400"><i class="fas fa-layer-group mr-2"></i>Preset AM Dibawah 5Mb</h1>
-            <input type="text" id="searchInput" placeholder="Cari judul preset..." 
+            <input type="text" id="searchInput" placeholder="Cari kode preset..." 
                 class="w-full md:w-64 p-2 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500 text-sm">
         </div>
     </header>
 
-    <nav class="bg-gray-800 border-b border-gray-700 sticky top-[81px] md:top-[73px] z-10 overflow-x-auto">
-        <div class="max-w-5xl mx-auto flex items-center px-6 py-4">
-            <p class="text-sm md:text-base font-medium text-blue-300">
-                <i class="fas fa-info-circle mr-2"></i>Semua preset tersedia di sini dan akan update setiap harinya.
-            </p>
-        </div>
-    </nav>
-
     <main class="max-w-5xl mx-auto p-6">
-        <div id="presetContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mb-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-4 gap-4">
+                <h2 class="text-lg font-bold text-blue-400 flex items-center">
+                    <i class="fas fa-download mr-2"></i> Aplikasi Alight Motion
+                </h2>
+                <div class="flex gap-2 w-full md:w-auto">
+                    <a href="https://youtube.com/@IQBAL_P" target="_blank" 
+                        class="flex-1 md:flex-none bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center justify-center transition">
+                        <i class="fab fa-youtube mr-2"></i> YouTube
+                    </a>
+                    <a href="https://www.instagram.com/pechkaboo?igsh=dHd5ODhpY2Noa2h1" target="_blank" 
+                        class="flex-1 md:flex-none bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-500 hover:opacity-80 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center justify-center transition">
+                        <i class="fab fa-instagram mr-2"></i> Instagram
+                    </a>
+                </div>
             </div>
+            
+            <div id="appContainer" class="grid grid-cols-1 gap-6">
+                </div>
+        </div>
+
+        <hr class="border-gray-700 mb-10">
+
+        <div>
+            <h2 class="text-lg font-bold mb-4 text-gray-400 flex items-center">
+                <i class="fas fa-list mr-2"></i> Daftar Koleksi Preset
+            </h2>
+            <div id="presetContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+        </div>
     </main>
 
     <script>
-        // DATA PRESET
-        const presets = [
-            { title: "Alight Motion", category: "Alight Motion (No Watermark)", link: "https://www.mediafire.com/file/yid9m5r6jc92rqk/Alight_Motion_latest_version_alighttmotionproapk.com.apk/file" },
-            { title: "JJ Kece", category: "JJ Kece", link: "jjkece.html" },
-            { title: "JJ Gameplay", category: "JJ GamePlay", link: "jjgameplay.html" },
-            { title: "JJ Full Bass", category: "JJ Full Bass", link: "jjfullbas.html" },
-            { title: "Sinematic", category: "Sinematic", link: "sinematic.html" },
-            { title: "JJ Collab", category: "JJ Collab", link: "jjcollab.html" },
-            { title: "JJ Tipis", category: "JJ Tipis", link: "jjtipis.html" },
-            { title: "Slowmo", category: "JJ Slowmo", link: "slowmo.html" }
+        // DATA APLIKASI
+        const apps = [
+            { 
+                title: "Alight Motion Pro v5.0.0", 
+                category: "No Watermark", 
+                link: "https://www.mediafire.com/file/yid9m5r6jc92rqk/Alight_Motion_latest_version_alighttmotionproapk.com.apk/file",
+                date: "Terbaru"
+            }
         ];
 
-        const container = document.getElementById('presetContainer');
+        // DATA PRESET
+        const presets = [
+            { title: "Preset 01", category: "01", link: "", date: "2026-03-28" },
+            { title: "Preset 02", category: "02", link: "", date: "2026-03-28" },
+            { title: "Preset 03", category: "03", link: "", date: "2026-03-28" },
+            { title: "Preset 04", category: "04", link: "", date: "2026-03-28" },
+            { title: "Preset 05", category: "05", link: "", date: "2026-03-28" },
+            { title: "Preset 06", category: "06", link: "", date: "2026-03-28" },
+            { title: "Preset 07", category: "07", link: "", date: "2026-03-28" },
+            { title: "Preset 08", category: "08", link: "", date: "2026-03-28" },
+            { title: "Preset 09", category: "09", link: "", date: "2026-03-28" },
+            { title: "Preset 10", category: "10", link: "", date: "2026-03-28" },
+            { title: "Preset 11", category: "11", link: "", date: "2026-03-28" },
+            { title: "Preset 12", category: "12", link: "", date: "2026-03-28" },
+            { title: "Preset 13", category: "13", link: "", date: "2026-03-28" },
+            { title: "Preset 14", category: "14", link: "", date: "2026-03-28" },
+            { title: "Preset 15", category: "15", link: "", date: "2026-03-28" },
+            { title: "Preset 16", category: "16", link: "", date: "2026-03-28" },
+            { title: "Preset 17", category: "17", link: "", date: "2026-03-28" },
+            { title: "Preset 18", category: "18", link: "", date: "2026-03-28" },
+            { title: "Preset 19", category: "19", link: "", date: "2026-03-28" },
+            { title: "Preset 20", category: "20", link: "", date: "2026-03-28" },
+            { title: "Preset 21", category: "21", link: "", date: "2026-03-28" },
+            { title: "Preset 22", category: "22", link: "", date: "2026-03-28" },
+            { title: "Preset 23", category: "23", link: "", date: "2026-03-28" },
+            { title: "Preset 24", category: "24", link: "", date: "2026-03-28" },
+            { title: "Preset 25", category: "25", link: "", date: "2026-03-28" },
+            { title: "Preset 26", category: "26", link: "", date: "2026-03-28" },
+            { title: "Preset 27", category: "27", link: "", date: "2026-03-28" },
+            { title: "Preset 28", category: "28", link: "", date: "2026-03-28" },
+            { title: "Preset 29", category: "29", link: "", date: "2026-03-28" },
+            { title: "Preset 30", category: "30", link: "", date: "2026-03-28" },
+        ];
+
+        const appContainer = document.getElementById('appContainer');
+        const presetContainer = document.getElementById('presetContainer');
         const searchInput = document.getElementById('searchInput');
 
+        // Fungsi menampilkan Aplikasi
+        function displayApps() {
+            appContainer.innerHTML = '';
+            apps.forEach(item => {
+                appContainer.innerHTML += `
+                    <div class="bg-gradient-to-r from-blue-900/40 to-gray-800 rounded-xl p-6 border border-blue-500/30 flex flex-col md:flex-row justify-between items-center shadow-2xl gap-4">
+                        <div class="text-center md:text-left">
+                            <span class="text-[10px] bg-blue-600 px-2 py-0.5 rounded text-white font-bold uppercase tracking-widest">${item.category}</span>
+                            <h3 class="text-xl font-black mt-2 tracking-tight">${item.title}</h3>
+                            <p class="text-gray-400 text-xs mt-1 italic">Support Preset XML & Link Alight Motion</p>
+                        </div>
+                        <a href="${item.link}" target="_blank" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 px-10 py-3 rounded-xl font-black text-sm transition transform hover:scale-105 shadow-lg shadow-blue-900/40 text-center">
+                            DOWNLOAD APK
+                        </a>
+                    </div>
+                `;
+            });
+        }
+
+        // Fungsi menampilkan Preset
         function displayPresets(data) {
-            container.innerHTML = '';
+            presetContainer.innerHTML = '';
             if(data.length === 0) {
-                container.innerHTML = `<p class="col-span-full text-center text-gray-500 py-10">Preset tidak ditemukan...</p>`;
+                presetContainer.innerHTML = `<p class="col-span-full text-center text-gray-500 py-10">Preset tidak ditemukan...</p>`;
                 return;
             }
 
             data.forEach(item => {
-                // LOGIKA TAB: Jika link mengandung '.html', buka di tab yang sama (_self)
+                // LOGIKA: Jika link mengarah ke .html, buka di tab yang sama (_self)
                 const isInternal = item.link.includes('.html');
                 const targetWindow = isInternal ? '_self' : '_blank';
-                const btnText = isInternal ? 'Buka Koleksi' : 'Download Alight Motion';
+                const btnText = isInternal ? 'Buka Koleksi' : 'Import Preset';
 
                 const card = `
                     <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:scale-[1.02] transition-transform shadow-lg">
                         <div class="p-4 border-b border-gray-700 flex justify-between items-center">
                             <span class="text-[10px] uppercase font-black px-2 py-1 bg-gray-900 text-blue-400 tracking-wider rounded">${item.category}</span>
-                            <span class="text-[10px] text-gray-500">${item.date}</span>
+                            <span class="text-[10px] text-gray-500">${item.date || ''}</span>
                         </div>
                         <div class="p-5">
                             <h3 class="text-lg font-bold mb-5 line-clamp-1">${item.title}</h3>
@@ -83,7 +156,7 @@
                         </div>
                     </div>
                 `;
-                container.innerHTML += card;
+                presetContainer.innerHTML += card;
             });
         }
 
@@ -96,15 +169,16 @@
 
         // Fungsi Copy
         function copyLink(text) {
-            if(text === "#" || text.includes(".html")) {
-                alert("Ini adalah folder koleksi, silakan buka terlebih dahulu.");
+            if(text.includes(".html")) {
+                alert("Silakan buka koleksi terlebih dahulu untuk menyalin link preset.");
                 return;
             }
             navigator.clipboard.writeText(text);
-            alert('Link Preset berhasil disalin!');
+            alert('Link berhasil disalin!');
         }
 
-        // Jalankan saat pertama load
+        // Jalankan saat load
+        displayApps();
         displayPresets(presets);
     </script>
 </body>
